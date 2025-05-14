@@ -6,7 +6,7 @@
 /*   By: fragamez <fragamez@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 12:51:03 by fragamez          #+#    #+#             */
-/*   Updated: 2025/02/19 17:31:37 by fragamez         ###   ########.fr       */
+/*   Updated: 2025/05/14 17:02:39 by fragamez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ void	execute_program(char **argv, int *fd, char **env);
 
 void	operate_dup2(int fd_old, int fd_new);
 void	ft_free_split(char **split);
+void	clean_resources(int *pipe_fd, int fd_in, int fd_out);
+void	ft_printf_fd(int fd, const char *format, ...);
+void	exec_cmd(char *cmd, char **envp, int fd_in, int fd_out);
 
 #endif
